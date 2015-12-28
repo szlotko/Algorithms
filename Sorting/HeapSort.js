@@ -40,14 +40,9 @@ function siftDown(array, start, end){
 
     while(leftIndex <= end || rightIndex <= end){
 
-        var maxChildIndex;
+        var maxChildIndex = leftIndex;
 
-        if(leftIndex <= end){
-            maxChildIndex = leftIndex;
-        }
-
-        if(rightIndex <= end && (maxChildIndex == undefined
-            || array[rightIndex] > array[leftIndex])){
+        if(rightIndex <= end && array[rightIndex] > array[leftIndex]){
             maxChildIndex = rightIndex;
         }
 
